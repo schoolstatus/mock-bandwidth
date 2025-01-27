@@ -1,6 +1,8 @@
 # Mock::Bandwidth
+[![Gem Version](https://badge.fury.io/rb/mock-bandwidth.svg)](https://badge.fury.io/rb/mock-twilio)
+![mock-bandwidth](https://github.com/schoolstatus/mock-twilio/actions/workflows/ruby.yml/badge.svg)
 
-This is a SchoolStatus implementation to mock Bandwidth to perform requests to [bandwidth-oai](https://docs.stoplight.io/docs/prism/83dbbd75532cf-http-mocking)
+This is a SchoolStatus implementation to mock Bandwidth-sdk to perform requests to [bandwidth-oai](https://docs.stoplight.io/docs/prism/83dbbd75532cf-http-mocking)
 
 
 # Installation
@@ -13,6 +15,7 @@ gem install mock-bandwidth
 
 ## Requirements
 - [Bandwidth-oai](https://docs.stoplight.io/docs/prism/83dbbd75532cf-http-mocking)
+- [Bandwidth-sdk](https://github.com/Bandwidth/ruby-sdk)
 
 ## Defaults Prism
 
