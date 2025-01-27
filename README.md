@@ -1,6 +1,6 @@
 # Mock::Bandwidth
-[![Gem Version](https://badge.fury.io/rb/mock-bandwidth.svg)](https://badge.fury.io/rb/mock-twilio)
-![mock-bandwidth](https://github.com/schoolstatus/mock-twilio/actions/workflows/ruby.yml/badge.svg)
+[![Gem Version](https://badge.fury.io/rb/mock-bandwidth.svg)](https://badge.fury.io/rb/mock-bandwidth)
+![mock-bandwidth](https://github.com/schoolstatus/mock-bandwidth/actions/workflows/ruby.yml/badge.svg)
 
 This is a SchoolStatus implementation to mock Bandwidth-sdk to perform requests to [bandwidth-oai](https://docs.stoplight.io/docs/prism/83dbbd75532cf-http-mocking)
 
