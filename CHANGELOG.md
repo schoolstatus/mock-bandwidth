@@ -1,5 +1,3 @@
-## [Unreleased]
+## [1.0.0] - 2025-01-25
 
-## [0.1.0] - 2025-01-25
-
-- Initial release
+- Add create message support
