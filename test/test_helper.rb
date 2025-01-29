@@ -20,3 +20,7 @@ Bandwidth.configure do |config| # Configure Basic Auth
     connection.use Mock::Bandwidth::Middleware::Proxy
   end
 end
+
+Mock::Bandwidth.configure do |config|
+  config.webhook_message_status_url = "http://my-server.com/webhooks/bandwidth/messages_updates"
+end

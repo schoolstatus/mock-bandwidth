@@ -35,7 +35,7 @@ module Mock
             ],
           }.to_json
 
-          response = webhook_client.new(url:, params:, headers:).post
+          response = webhook_client.new(url: url, params: params, headers: headers).post
 
           case response.code.to_i
           when 200..204

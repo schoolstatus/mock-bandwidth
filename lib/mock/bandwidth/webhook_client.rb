@@ -12,7 +12,7 @@ module Mock
       end
 
       def post
-        arguments = { body: params, headers: }
+        arguments = { body: params, headers: headers }
 
         HTTParty.post(url, **arguments)
       end
