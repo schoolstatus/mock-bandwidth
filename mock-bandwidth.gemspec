@@ -5,7 +5,7 @@ require_relative "lib/mock/bandwidth/version"
 Gem::Specification.new do |spec|
   spec.name = "mock-bandwidth"
   spec.version = Mock::Bandwidth::VERSION
-  spec.authors = ["Guillermo Quezada"]
+  spec.authors = ['SchoolStatus Platform Team']
   spec.email = ["meemocol@gmail.com"]
 
   spec.summary = "This repository contains Mock::Bandwidth and Webhooks for Bandwidth's API."
@@ -33,4 +33,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'faraday', '>= 1.0.1', '< 3.0'
   spec.add_dependency "bandwidth-sdk", ">= 14.0"
+  spec.add_dependency "rufus-scheduler", ">= 3.9.1"
+  spec.add_dependency "activesupport", ">= 6.0.0"
+  spec.add_dependency "httparty", "~> 0.22.0"
 end

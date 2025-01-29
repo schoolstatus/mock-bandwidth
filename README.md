@@ -29,6 +29,12 @@ gem install mock-bandwidth
 | ------------- | ------------- |
 | :white_check_mark: | `Bandwidth::MessagesApi.new.create_message(account_id, body)`  |
 
+## Trigger resources updates
+
+| Mock::Bandwidth::Webhooks  | Support       |
+| ------------- | ------------- |
+| `Webhooks::Messages`  | :white_check_mark: |
+
 
 ## How to use
 Initializer sample
@@ -41,6 +47,10 @@ Bandwidth.configure do |config| # Configure Basic Auth
     connection.proxy = "http://mock-server.test"
     connection.use Mock::Bandwidth::Middleware::Proxy
   end
+end
+
+Mock::Bandwidth.configure do |config|
+  config.webhook_message_status_url = "http://my-server.com/webhooks/bandwidth/messages_updates"
 end
 ```
 

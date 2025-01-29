@@ -15,15 +15,24 @@ module Mock
               body["text"] = data["text"] if body["text"]
               body["applicationId"] = data["applicationId"] if body["applicationId"]
 
-              body["id"] = message_id if body["id"]
+              body["id"] = message_id(body) if body["id"]
 
               body.to_json
             end
 
-            def message_id
+            def message_id(body)
               timestamp = (Time.now.to_f * 1000).to_i.to_s[0..12]
               random_part = SecureRandom.alphanumeric(15).downcase
-              "#{timestamp}#{random_part}"
+              id = "#{timestamp}#{random_part}"
+              scheduler = Rufus::Scheduler.new
+              scheduler.in '2s' do
+                begin
+                  Mock::Bandwidth::Webhooks::Messages.trigger(id, body)
+                rescue  => e
+                  puts e
+                end
+              end
+              id
             end
           end
         end
