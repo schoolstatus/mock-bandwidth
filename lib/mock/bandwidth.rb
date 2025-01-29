@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 require "rufus-scheduler"
+require "active_support"
+require "active_support/core_ext/time"
+require "httparty"
 require_relative "bandwidth/version"
 require_relative "bandwidth/middleware/proxy"
 require_relative "bandwidth/response"

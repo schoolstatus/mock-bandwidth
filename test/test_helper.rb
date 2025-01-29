@@ -9,7 +9,8 @@ $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 require "mock/bandwidth"
 require "minitest/autorun"
 require "bandwidth-sdk"
-require 'webmock/minitest'
+require "webmock/minitest"
+require "timecop"
 require "pry"
 
 Bandwidth.configure do |config| # Configure Basic Auth

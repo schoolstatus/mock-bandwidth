@@ -20,7 +20,7 @@ module Mock
                 message: {
                   id: id,
                   owner: body["from"],
-                  applicationId: "i12341234",
+                  applicationId: "12341234",
                   time: Time.current.rfc2822,
                   segmentCount: 1,
                   direction: "out",
@@ -41,7 +41,6 @@ module Mock
           when 200..204
             response
           when 400..600
-            binding.pry
             raise Webhooks::RestError, Mock::Twilio::ErrorHandler.new(response).raise
           end
         end

@@ -14,7 +14,7 @@ module Mock
       def post
         arguments = { body: params, headers: headers }
 
-        HTTParty.post(url, **arguments)
+        ::HTTParty.post(url, **arguments)
       end
     end
   end
