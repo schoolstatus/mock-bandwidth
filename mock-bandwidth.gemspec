@@ -34,6 +34,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'faraday', '>= 1.0.1', '< 3.0'
   spec.add_dependency "bandwidth-sdk", ">= 14.0"
   spec.add_dependency "rufus-scheduler", ">= 3.9.1"
-  spec.add_dependency "activesupport", ">= 6.0.0"
+  spec.add_dependency "activesupport", ">= 5.2"
   spec.add_dependency "httparty", "~> 0.22.0"
 end
