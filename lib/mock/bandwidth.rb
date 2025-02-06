@@ -18,7 +18,7 @@ module Mock
   module Bandwidth
     extend SingleForwardable
 
-    def_delegators :configuration, :webhook_message_status_url
+    def_delegators :configuration, :webhook_message_status_url, :disable_webhooks
 
     def self.configure(&block)
       yield configuration
@@ -28,6 +28,6 @@ module Mock
       @configuration ||= Util::Configuration.new
     end
 
-    private_class_method :configuration
+    public_class_method :configuration
   end
 end

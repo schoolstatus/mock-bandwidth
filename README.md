@@ -51,6 +51,8 @@ end
 
 Mock::Bandwidth.configure do |config|
   config.webhook_message_status_url = "http://my-server.com/webhooks/bandwidth/messages_updates"
+  # optional
+  # config.disable_webhooks = true
 end
 ```
 
