@@ -28,6 +28,6 @@ module Mock
       @configuration ||= Util::Configuration.new
     end
 
-    private_class_method :configuration
+    public_class_method :configuration
   end
 end
