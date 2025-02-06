@@ -5,6 +5,8 @@ module Mock
     module Webhooks
       class Messages < Base
         def self.trigger(id, body)
+          return if Mock::Bandwidth.disable_webhooks
+
           # Wait simulation from twilio
           sleep DELAY.sample
 

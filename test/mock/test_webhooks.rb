@@ -75,7 +75,18 @@ class Mock::TestBandwidth < Minitest::Test
              "id"=>"id123",
     }
 
-
     assert_raises(Mock::Bandwidth::Webhooks::RestError) { Mock::Bandwidth::Webhooks::Messages.trigger("id123", payload) }
+  end
+
+  def test_mock_disable_webhooks
+    Mock::Bandwidth.configure do |config|
+      config.disable_webhooks = true
+    end
+
+    assert_nil Mock::Bandwidth::Webhooks::Messages.trigger("id123", {})
+
+    Mock::Bandwidth.configure do |config|
+      config.disable_webhooks = false
+    end
   end
 end
