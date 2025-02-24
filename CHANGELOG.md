@@ -1,4 +1,7 @@
-## [1.2] - 2025-06-03
+## [1.2.1] - 2025-02-03
+- Fix Scheduler perfomance
+
+## [1.2] - 2025-02-06
 - Add disable_webhooks configuration
 - Fix webhooks ErrorHandler
 
