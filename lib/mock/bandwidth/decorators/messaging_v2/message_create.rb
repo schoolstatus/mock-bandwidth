@@ -6,6 +6,8 @@ module Mock
       module MessagingV2
         class MessageCreate
           class << self
+            @@scheduler = Rufus::Scheduler.new
+
             def decorate(body, request)
               data = JSON.parse request.request_body
 
@@ -24,8 +26,7 @@ module Mock
               timestamp = (Time.now.to_f * 1000).to_i.to_s[0..12]
               random_part = SecureRandom.alphanumeric(15).downcase
               id = "#{timestamp}#{random_part}"
-              scheduler = Rufus::Scheduler.new
-              scheduler.in '2s' do
+              @@scheduler.in '2s' do
                 begin
                   Mock::Bandwidth::Webhooks::Messages.trigger(id, body)
                 rescue  => e
